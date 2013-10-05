@@ -348,7 +348,7 @@ $ make bootstrap</pre>
       They will automatically be picked up by the test runner if they are named
       with a suffix of:</p>
       <pre>-test.js</pre>
-      <p>For example, to add a new test for the <tt>foobar</tt> pattern, 
+      <p>For example, to add a new test for the <tt>foobar</tt> pattern,
       you should name your test file like so:</p>
       <pre>pattern-foobar-test.js</pre>
       </p>
@@ -361,6 +361,7 @@ $ make bootstrap</pre>
       <h4>Test coverage</h4>
       <p>In the <strong>./coverage</strong> directory find the index.html file under the folder for the browser you are using. This will tell you
       the current coverage from the last test run</p>
+      <p>Unfortunately obtaining coverage information does not currently work with the <strong>test-chrome</strong> target.</p>
 
       <h3>Step 7: Releasing/Passing bundles on to Plone developers</h3>
       <p>
@@ -795,11 +796,11 @@ $ make bootstrap</pre>
     <% if (title) { %><h3><%= title %></h3><% } %>
   </div>
   <div class="<%= options.classBodyName %>">
-    <div class="<%= options.classPrependName %>"><%= prepend %></div> 
+    <div class="<%= options.classPrependName %>"><%= prepend %></div>
     <div class="<%= options.classContentName %>"><%= content %></div>
   </div>
-  <div class="options.classFooterName"> 
-    <%= buttons %> 
+  <div class="options.classFooterName">
+    <%= buttons %>
   </div>
 </div>
   </script>
@@ -1572,7 +1573,7 @@ function($action, response, options) { ... }
     });
   </script>
   <script type="text/template" id="page_select2">
-  
+
   </script>
   <script type="text/example" class="example-select2" data-title="Autocomplete with search">
     <select class="pat-select2" data-pat-select2="width:20em">
@@ -2073,36 +2074,36 @@ function($action, response, options) { ... }
       title: "DropZone",
       description: "file upload with drag and drop support",
       attributes: [
-        {attribute: "url", 
-         type: "String", 
+        {attribute: "url",
+         type: "String",
          description: "If not used with a form, this option must provide the URL to submit to"},
-        {attribute: "clickable", 
+        {attribute: "clickable",
          type: "Boolean",
          description: "If you can click on container to also upload"},
-        {attribute: "className", 
-         type: "String", 
+        {attribute: "className",
+         type: "String",
          description: "value for class attribute in the form element"},
-        {attribute: "paramName", 
-         type: "String", 
+        {attribute: "paramName",
+         type: "String",
          description: "value for name attribute in the file input element"},
-        {attribute: "uploadMultiple", 
-         type: "Boolean", 
+        {attribute: "uploadMultiple",
+         type: "Boolean",
          description: "condition value for multiple attribute in the file input element. If the value is 'true' and paramName is file, 'multiple=multiple' and 'name=file[]' will be added in the file input."},
-        {attribute: "wrap", 
+        {attribute: "wrap",
          defaultValue: false,
-         type: "Boolean, String", 
+         type: "Boolean, String",
          description: "<code>true</code> or <code>false</code> for wrapping this element using the value of <code>wrapperTemplate</code>. If the value is 'inner', this element will wrap the <code>wrapperTemplate</code> value."},
-        {attribute: "wrapperTemplate", 
-         type: "String", 
+        {attribute: "wrapperTemplate",
+         type: "String",
          description: "HTML template for wrapping around with this element."},
-        {attribute: "resultTemplate", 
-         type: "String", 
+        {attribute: "resultTemplate",
+         type: "String",
          description: "HTML template for the element that will contain file information."},
-        {attribute: "autoCleanResults", 
-         type: "Boolean", 
-         defaultValue: "<code>false</code>", 
+        {attribute: "autoCleanResults",
+         type: "Boolean",
+         defaultValue: "<code>false</code>",
          description: "condition value for the file preview in div element to fadeout after file upload is completed."},
-        {attribute: "previewsContainer", 
+        {attribute: "previewsContainer",
          type: "Selector",
          description: "JavaScript selector for file preview in div element."},
       ]
@@ -2213,7 +2214,7 @@ function($action, response, options) { ... }
     </table>
   </script>
 
-  
+
   <!--  **** Moment **** -->
   <script>
     addPattern({
